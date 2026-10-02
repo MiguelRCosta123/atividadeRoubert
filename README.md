@@ -1,16 +1,18 @@
-# React + Vite
+# Login com React + Vite + Supabase
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicação de autenticação com cadastro, login, logout e persistência de sessão usando Supabase.
 
-Currently, two official plugins are available:
+## Como instalar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+Como configurar o .env.local
+Crie um arquivo .env.local na raiz do projeto com as seguintes variáveis:
+VITE_SUPABASE_URL=sua_url_do_supabase
+VITE_SUPABASE_PUBLISHABLE_KEY=sua_chave_publicavel
 
-## React Compiler
+Como executar
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Maior dificuldade
+A maior dificuldade foi entender como manter a sessão do usuário após atualizar a página, usando getSession e onAuthStateChange do Supabase.
